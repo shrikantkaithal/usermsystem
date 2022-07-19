@@ -1,6 +1,4 @@
-
-
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -34,14 +32,12 @@ background:linear-gradient(135deg,#71b7e6,#9b59b6);
  background:#fff;
  padding:30px;
  margin:0 15px;
- border-radius:5px;
- }
+ border-radius:5px;}
  .container, title{
  font-size:25px;
  font-weight:1000;
  position: relative;
- color:#333;
- }
+ color:#333;}
 </style>
 </head>
 <body>
