@@ -89,9 +89,7 @@ try
 	
 	while(rs.next()){
 	
-%>
-		
-		 <tr>
+%>              <tr>
 		 <td> <%= rs.getInt("id") %> </td>
 		 <td> <%= rs.getString("name") %></td>
 		 <td> <%= rs.getInt("age") %></td>
