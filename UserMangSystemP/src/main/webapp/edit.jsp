@@ -59,7 +59,7 @@ background:linear-gradient(135deg,#71b7e6,#9b59b6);
 try{
 	  Connection con=getConnection();
 	  PreparedStatement ps=con.prepareStatement
-			  ("select * from usm2 where id=?");
+			  ("select * from usm1 where id=?");
 	  ps.setString(1, request.getParameter("id"));
 	  
       ResultSet rs=ps.executeQuery();
@@ -69,9 +69,7 @@ try{
       String name=rs.getString("name");
       int age=rs.getInt("age");
       String city=rs.getString("city");
-  
-	
-	%>
+ %>
 
 <div class="container">
  <div class="title">EDIT USERS DATA</div>
@@ -107,47 +105,12 @@ try{
 		 </div>
 		</form>
 		</div>
-		
-		
-		
-		
 <%
-		
-	
 }catch(Exception e)
 {
 e.printStackTrace();
 }
-%>
-
-
-<script type="text/javascript">
-    function whitespace() {
-    	var uname=document.getElementById('name1').value;
-    	var uage=document.getElementById('age1').value;
-    	var ucity=document.getElementById('city1').value;
-    	
-    	if(uname.replace(/\s/g, "").lenght <=0)
-    	  {
-          alert("No whitespace and empty field are allowed");
-          return false;
-    	  }
-    	
-    	if(uage.replace(/\s/g, "").lenght <=0)
-  	     {
-         alert("No whitespace and empty field are allowed");
-         return false;
-  	     }
-    	
-    	if(ucity.replace(/\s/g, "").lenght <=0)
-  	    {
-        alert("No whitespace and empty field are allowed");
-        return false;
-  	    }
-		
-	}
-     
-   </script>
+%> 	 
 
 </body>
 </html>
