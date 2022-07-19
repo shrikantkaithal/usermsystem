@@ -17,7 +17,7 @@
       Connection con=getConnection();
       Class.forName("oracle.jdbc.driver.OracleDriver");
 	  PreparedStatement ps=con.prepareStatement
-			 ("delete from usm2 where id=?");
+			 ("delete from usm1 where id=?");
 	  ps.setString(1, request.getParameter("id"));
 	 PrintWriter pw=response.getWriter();
 	 response.setContentType("text/html");
@@ -33,15 +33,11 @@
 	  {
 		  pw.println("<b>Error yar kuj to galat kiya tune...</b>");
 	  }
-	 
-
-	 
  }
  catch(Exception e)
  {
 	 e.printStackTrace();
  }
- 
  %>
 
 </body>
