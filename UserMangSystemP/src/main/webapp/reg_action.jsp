@@ -3,8 +3,7 @@
 <%@page import="oracle.jdbc.driver.DBConversion"%>
 <%@include file="DBConnection.jsp"%>
 <%@page import="java.sql.Connection"%>
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,10 +14,8 @@ pageEncoding="ISO-8859-1"%>
 <%! int k=0; %>
 <%
 try
-{
- Connection con=getConnection();
- PreparedStatement ps=con.prepareStatement
- ("insert into usm1(id,name,age,city) values(seq_usm2.nextval,?,?,?)");
+{Connection con=getConnection();
+ PreparedStatement ps=con.prepareStatement("insert into usm1(id,name,age,city) values(seq_usm2.nextval,?,?,?)");
  PrintWriter pw=response.getWriter();
  response.setContentType("text/html");
  ps.setString(1, request.getParameter("name"));
