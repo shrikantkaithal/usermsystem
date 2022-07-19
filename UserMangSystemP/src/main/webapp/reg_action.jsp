@@ -25,8 +25,8 @@ k=ps.executeUpdate();
 if(k==1){
 pw.println("<b><span class='label label-default'>Sucessfully Add User...</span></b>");
 RequestDispatcher rd=request.getRequestDispatcher("dashboard.jsp");
-rd.include(request, response);
-} else{ pw.println("<b><span class='label label-default'>Not Updated.....</span></b>");
+rd.include(request, response);} else{ 
+pw.println("<b><span class='label label-default'>Not Updated.....</span></b>");
 RequestDispatcher rd=request.getRequestDispatcher("dashboard.jsp");
 rd.include(request, response);}
 }
