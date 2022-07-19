@@ -13,12 +13,8 @@
 </head>
 <body>
 <%! int k=0; %>
-
-
 <%
- 
-
-try{
+ try{
 	 PrintWriter pw=response.getWriter();
 	 response.setContentType("text/html"); 
 	 
@@ -30,7 +26,7 @@ try{
 	  String city=request.getParameter("city");
 	  
 	  PreparedStatement ps=con.prepareStatement
-	  ("update usm2 set name=?,age=?,city=? where id=?");
+	  ("update usm1 set name=?,age=?,city=? where id=?");
 	  
 	  ps.setString(1, request.getParameter("name"));
 	  ps.setInt(2, Integer.parseInt(request.getParameter("age")));
