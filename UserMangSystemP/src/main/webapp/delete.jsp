@@ -11,16 +11,15 @@
 <title>Insert title here</title>
 </head>
 <body>
-
 <%
  try {
       Connection con=getConnection();
       Class.forName("oracle.jdbc.driver.OracleDriver");
 	  PreparedStatement ps=con.prepareStatement
-			 ("delete from usm1 where id=?");
+	  ("delete from usm1 where id=?");
 	  ps.setString(1, request.getParameter("id"));
-	 PrintWriter pw=response.getWriter();
-	 response.setContentType("text/html");
+	  PrintWriter pw=response.getWriter();
+	  response.setContentType("text/html");
 	  int k=ps.executeUpdate();
 	  if(k==1)
 	  {
@@ -39,6 +38,5 @@
 	 e.printStackTrace();
  }
  %>
-
 </body>
 </html>
