@@ -12,9 +12,8 @@
 </head>
 <body>
 <%! int k=0; %>
-<%
-try
-{Connection con=getConnection();
+<% try{
+Connection con=getConnection();
 PreparedStatement 
 ps=con.prepareStatement("insert into usm1(id,name,age,city) values (seq_usm2.nextval,?,?,?)");
 PrintWriter pw=response.getWriter();
@@ -32,10 +31,8 @@ pw.println("<b><span class='label label-default'>Not Updated.....</span></b>");
 RequestDispatcher rd=request.getRequestDispatcher("dashboard.jsp");
 rd.include(request, response);}
 }
-catch(Exception e)
-{
-e.printStackTrace();
-}
+catch(Exception e){
+e.printStackTrace();}
 %>
 </body>
 </html>
