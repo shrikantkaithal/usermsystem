@@ -26,9 +26,7 @@ align-item:center;
 padding:10px;
 background:linear-gradient(135deg,#71b7e6,#9b59b6);
 }
-
-
- .container{
+.container{
  position:relative;
  max-width:600px;
  width:100%;
@@ -46,34 +44,29 @@ background:linear-gradient(135deg,#71b7e6,#9b59b6);
  color:#333;
  }
  
-
-
-
 </style>
 </head>
 <body>
 <div class="container">
  <div class="title">ADD USERS</div>
   
-    <form onsubmit="return whitespace()" action="reg_action.jsp" method="post" id="log" >
+    <form action="reg_action.jsp" method="post" id="log" >
      <div class="user-details">
       
       <div class="input-box">
       <span class="details">Name</span>
-      <input type="text" class="form-control" placeholder="enter name" name="name" id="name1" autofocus="autofocus" required/>
+      <input type="text" class="form-control" placeholder="enter name" name="name" autofocus="autofocus" required/>
       </div>
       
        <div class="input-box">
       <span class="details">Age</span>
-      <input type="text" class="form-control" placeholder="enter name" name="name" id="age1" required/>
+      <input type="text" class="form-control" placeholder="enter name" name="age" required/>
       </div>
        <div class="input-box">
       <span class="details">City</span>
-      <input type="text" class="form-control" placeholder="enter name" name="name" id="city1" required/>
-      </div>
-     
-     
-    <br/>
+      <input type="text" class="form-control" placeholder="enter name" name="city" required/>
+      </div><br/>
+	     
     <div class="button" style="text-align:center">
     <input type="submit" class="btn btn-primary" value="Add User"  />
     <a class="btn btn-primary" href="dashboard.jsp">Cancel</a>
@@ -82,33 +75,7 @@ background:linear-gradient(135deg,#71b7e6,#9b59b6);
    </form>
    </div>
    
-   <script type="text/javascript">
-    function whitespace() {
-    	var uname=document.getElementById('name1').value;
-    	var uage=document.getElementById('age1').value;
-    	var ucity=document.getElementById('city1').value;
-    	
-    	if(uname.replace(/\s/g, "").lenght <=0)
-    	  {
-          alert("No whitespace and empty field are allowed");
-          return false;
-    	  }
-    	
-    	if(uage.replace(/\s/g, "").lenght <=0)
-  	     {
-         alert("No whitespace and empty field are allowed");
-         return false;
-  	     }
-    	
-    	if(ucity.replace(/\s/g, "").lenght <=0)
-  	    {
-        alert("No whitespace and empty field are allowed");
-        return false;
-  	    }
-		
-	}
-     
-   </script>
+  
 
 </body>
 </html>
