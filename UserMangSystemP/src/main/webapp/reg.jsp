@@ -41,31 +41,31 @@ background:linear-gradient(135deg,#71b7e6,#9b59b6);
  position: relative;
  color:#333;
  }
- </style>
+</style>
 </head>
 <body>
 <div class="container">
- <div class="title">ADD USERS</div>
-   <form action="reg_action.jsp" method="post" id="log" >
-     <div class="user-details">
-      <div class="input-box">
-       <span class="details">Name</span>
-        <input type="text" class="form-control" placeholder="enter name" name="name" autofocus="autofocus" required/>
-        </div>
-        <div class="input-box">
-        <span class="details">Age</span>
-        <input type="text" class="form-control" placeholder="enter name" name="age" required/>
-        </div>
-        <div class="input-box">
-        <span class="details">City</span>
-        <input type="text" class="form-control" placeholder="enter name" name="city" required/>
-        </div><br/>
-       <div class="button" style="text-align:center">
-     <input type="submit" class="btn btn-primary" value="Add User"  />
-    <a class="btn btn-primary" href="dashboard.jsp">Cancel</a>
-    </div>
-    </div>
-   </form>
-   </div>
- </body>
+<div class="title">ADD USERS</div>
+<form action="reg_action.jsp" method="post" id="log" >
+<div class="user-details">
+<div class="input-box">
+<span class="details">Name</span>
+<input type="text" class="form-control" placeholder="enter name" name="name" autofocus="autofocus" required/>
+</div>
+<div class="input-box">
+<span class="details">Age</span>
+<input type="text" class="form-control" placeholder="enter name" name="age" required/>
+</div>
+<div class="input-box">
+<span class="details">City</span>
+<input type="text" class="form-control" placeholder="enter name" name="city" required/>
+</div><br/>
+<div class="button" style="text-align:center">
+<input type="submit" class="btn btn-primary" value="Add User"  />
+<a class="btn btn-primary" href="dashboard.jsp">Cancel</a>
+</div>
+</div>
+</form>
+</div>
+</body>
 </html>
