@@ -79,10 +79,10 @@ try
 		 <td> <%= rs.getInt("age") %></td>
 		 <td> <%= rs.getString("city") %></td>
 		 <td> <a class="btn btn-primary" href="edit.jsp?id=<%= rs.getInt("id") %>">Edit</a>
-		      <a class="btn btn-danger" onclick="return confirm('Pakka Delete karu na dekh le bad me nahi show karunga <%= rs.getString("name") %>?');" 
-		        href="delete.jsp?id=<%= rs.getInt("id") %>">Delete</a>
+		 <a class="btn btn-danger" onclick="return confirm('Pakka Delete karu na dekh le bad me nahi show karunga <%= rs.getString("name") %>?');" 
+		    href="delete.jsp?id=<%= rs.getInt("id") %>">Delete</a>
 		 </td>
-		 </tr>
+		</tr>
 <%}
 }
 catch(Exception e)
