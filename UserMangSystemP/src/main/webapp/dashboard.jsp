@@ -82,8 +82,7 @@ try
 		 <a class="btn btn-danger" onclick="return confirm('Pakka Delete karu na dekh le bad me nahi show karunga <%= rs.getString("name") %>?');" 
 		    href="delete.jsp?id=<%= rs.getInt("id") %>">Delete</a>
 		 </td>
-		</tr>
-<%}
+		<%}
 }
 catch(Exception e)
 {
