@@ -54,39 +54,41 @@ background-color:red;
 <h1><center>USM DASHBOARD</center></h1>
 <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class='btn btn-primary' href='reg.jsp'>ADD USER</a>
-  <div class="float-end" id="log2"><label><b>Hello <%= session.getAttribute("name") %></b></label>
-   <a class="btn btn-primary" onclick="return confirm('Confirm Logout <%= session.getAttribute("name") %>');" href="logout.jsp">Logout</a><br/></div>
-    <table border="1" class="table table-striped, center" id="log" style="width:60%">
-      <thead>
-	  <th>ID</th>
-	  <th>Name</th>
-	  <th>Age</th>
-	  <th>City</th>
-	  <th>Action</th>
-	  </thead>
+<div class="float-end" id="log2"><label><b>Hello <%= session.getAttribute("name") %></b></label>
+<a class="btn btn-primary" onclick="return confirm('Confirm Logout <%= session.getAttribute("name") %>');" href="logout.jsp">Logout</a><br/></div>
+<table border="1" class="table table-striped, center" id="log" style="width:60%">
+<thead>
+<th>ID</th>
+<th>Name</th>
+<th>Age</th>
+<th>City</th>
+<th>Action</th>
+</thead>
 <%
 try
 {
-	Connection con=getConnection();
-	PrintWriter pw=response.getWriter();
-	response.setContentType("text/html");
-        PreparedStatement ps=con.prepareStatement("select * from usm1");
-	ResultSet rs=ps.executeQuery();
-        while(rs.next()){
-%>               <tr>
-		 <td> <%= rs.getInt("id") %> </td>
-		 <td> <%= rs.getString("name") %></td>
-		 <td> <%= rs.getInt("age") %></td>
-		 <td> <%= rs.getString("city") %></td>
-		 <td> <a class="btn btn-primary" href="edit.jsp?id=<%= rs.getInt("id") %>">Edit</a>
-		 <a class="btn btn-danger" onclick="return confirm('Pakka Delete karu na dekh le bad me nahi show karunga <%= rs.getString("name") %>?');" 
-		    href="delete.jsp?id=<%= rs.getInt("id") %>">Delete</a>
-		 </td>
-		<%}
+Connection con=getConnection();
+PrintWriter pw=response.getWriter();
+response.setContentType("text/html");
+PreparedStatement ps=con.prepareStatement("select * from usm1");
+ResultSet rs=ps.executeQuery();
+while(rs.next()){
+%> 
+<tr>
+<td> <%= rs.getInt("id") %> </td>
+<td> <%= rs.getString("name") %></td>
+<td> <%= rs.getInt("age") %></td>
+<td> <%= rs.getString("city") %></td>
+<td> <a class="btn btn-primary" href="edit.jsp?id=<%= rs.getInt("id") %>">Edit</a>
+<a class="btn btn-danger" onclick="return confirm('Pakka Delete karu na dekh le bad me nahi show karunga <%= rs.getString("name") %>?');" 
+   href="delete.jsp?id=<%= rs.getInt("id") %>">Delete</a>
+</td>
+</tr>
+<%}
 }
 catch(Exception e)
 {
-	e.printStackTrace();
+e.printStackTrace();
 }
 %>
 </table>
